@@ -1,7 +1,9 @@
 /* Cambio lingua italiano / inglese.
-   Ricorda la scelta del visitatore; la prima volta usa la lingua del browser.
+   Si parte sempre in italiano; se il visitatore sceglie EN, il sito se lo ricorda.
+   Per cambiare la lingua di partenza modifica la riga LINGUA_PREDEFINITA.
    Non serve modificarlo per aggiungere un anno. */
 (function () {
+  var LINGUA_PREDEFINITA = "it";   // "it" oppure "en"
   var html = document.documentElement;
 
   function leggi() {
@@ -22,8 +24,7 @@
   }
 
   var parametro = (location.search.match(/[?&]lang=(it|en)/) || [])[1];
-  var iniziale = parametro || leggi() ||
-    ((navigator.language || "it").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+  var iniziale = parametro || leggi() || LINGUA_PREDEFINITA;
   imposta(iniziale);
 
   document.addEventListener("DOMContentLoaded", function () {

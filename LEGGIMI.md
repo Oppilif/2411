@@ -25,7 +25,7 @@ Ogni testo è scritto due volte, una per lingua, con l'attributo `lang`:
 ```
 
 Il sito mostra solo la lingua scelta col pulsante **IT / EN** in alto (la prima
-volta usa la lingua del browser). Un testo uguale nelle due lingue, come un
+volta è sempre in italiano; la lingua di partenza si cambia in `assets/lingua.js`, riga `LINGUA_PREDEFINITA`). Un testo uguale nelle due lingue, come un
 nome, si scrive una volta sola senza `lang`.
 
 ## Pubblicare l'anno nuovo (es. 2027) — 5 passi
